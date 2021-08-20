@@ -1,0 +1,89 @@
+@import './../../common/styles/templates';
+@import './../../common/styles/vars';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.mainContainer {
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+}
+
+.container {
+  @extend %calendar-container;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  max-width: 800px;
+  min-width: 300px;
+  width: 100%;
+
+  margin: 0 auto;
+  border: 15px solid rgb(22, 101, 192);
+
+  & > .daySection,
+  .monthSection {
+    display: flex;
+
+    align-items: center;
+    align-self: stretch;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 50%;
+    flex-basis: 265px;
+    flex-grow: 1;
+  }
+}
+
+.daySection {
+  justify-content: space-around;
+  background-color: $daySectionBackgroundColor;
+
+  & > .dayWord,
+  .dayNumber {
+    text-align: center;
+    color: white;
+  }
+}
+
+.dayWord,
+.monthAndYearBlock {
+  font-size: 30px;
+  margin-top: 25px;
+  text-transform: uppercase;
+}
+
+.dayNumber {
+  font-size: 230px;
+}
+
+.monthSection {
+  justify-content: center;
+  background-color: $monthSectionBackgroundColor;
+}
+
+.monthAndYearBlock {
+  color: $daySectionBackgroundColor;
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+th {
+  text-align: center;
+  padding: 10px 13px 30px 13px;
+  color: $colorOfDaysOfWeek;
+}
+
+td {
+  text-align: center;
+  padding: 10px 3px 6px 3px;
+}
+
+.sameDay {
+  border: 4px solid red;
+  border-radius: 50%;
+}

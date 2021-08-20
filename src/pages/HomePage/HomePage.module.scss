@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import './../../common/styles/templates';
+@import './../../common/styles/vars';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Righteous', cursive;
+}
+
+.headerContainer {
+  @extend %container;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 1600px;
+  min-width: 400px;
+  width: 100%;
+  height: 70px;
+  background-color: rgb(85, 82, 82);
+}
+
+.pagesContainer,
+.componentsPageContainer {
+  margin-right: auto;
+  width: 12%;
+}
+
+.headerTextContainer,
+.componentsContainerText {
+  width: 80%;
+}
+
+.headerText {
+  color: white;
+  letter-spacing: 1em;
+  font-size: 30px;
+  text-align: center;
+}
+
+.homePageContainer {
+  @extend %container;
+  justify-content: center;
+  align-items: center;
+
+  background: url('https://seodiz.ru/wp-content/uploads/2012/04/7bloggers-content-0.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  position: fixed;
+  z-index: -1;
+
+  width: 1600px;
+  min-width: 400px;
+  width: 100%;
+  height: 100vh;
+}
+
+.homePageText {
+  font-size: 100px;
+  text-align: center;
+  transform: rotate(15deg);
+}
+
+.componentsPage {
+  display: flex;
+  flex-direction: column;
+  background: url('https://seodiz.ru/wp-content/uploads/2012/04/7bloggers-content-0.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width: 1600px;
+  min-width: 400px;
+  width: 100%;
+  height: 100vh;
+}
+
+.componentsContainer {
+  @extend %container;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 1600px;
+  min-width: 400px;
+  width: 100%;
+  height: 100px;
+  background-color: rgb(85, 82, 82);
+}
+
+.componentsText {
+  color: white;
+  letter-spacing: 0.3em;
+  font-size: 23px;
+  text-align: center;
+}
+
+.notFoundPage {
+  background: url('https://www.elevated.com/wp-content/uploads/2016/08/404-error-page-not-found-robot-teacher-with-SL9TR32.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width: 1600px;
+  min-width: 400px;
+  width: 100%;
+  height: 100vh;
+}

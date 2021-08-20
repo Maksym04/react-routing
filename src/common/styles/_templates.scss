@@ -1,0 +1,25 @@
+//SignUp Form
+%commonContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+//Calendar
+%calendar-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+%child-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+//Routing
+%container {
+  display: flex;
+}
