@@ -1,64 +1,80 @@
-@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 @import './../../common/styles/templates';
 @import './../../common/styles/vars';
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Righteous', cursive;
+.headerContainer,
+.homePageContainer,
+.componentsPage,
+.componentsContainer,
+.notFoundPage {
+  width: 1600px;
+  width: 100%;
+  min-width: 400px;
 }
 
 .headerContainer {
   @extend %container;
   justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
-  width: 1600px;
-  min-width: 400px;
-  width: 100%;
-  height: 70px;
-  background-color: rgb(85, 82, 82);
+  height: 50px;
+  background-color: $backgroundHeaderColor;
 }
 
 .pagesContainer,
 .componentsPageContainer {
+  @extend %container;
+  justify-content: space-around;
   margin-right: auto;
-  width: 12%;
+  width: 100%;
+}
+
+.textContainer {
+  @extend %container;
+  justify-content: space-evenly;
+  width: 20%;
 }
 
 .headerTextContainer,
 .componentsContainerText {
+  @extend %container;
+  justify-content: space-around;
   width: 80%;
 }
 
+.headerText,
+.text,
+.componentsText {
+  color: $text;
+}
+
 .headerText {
-  color: white;
   letter-spacing: 1em;
   font-size: 30px;
   text-align: center;
 }
 
-.homePageContainer {
-  @extend %container;
-  justify-content: center;
-  align-items: center;
+.text {
+  text-decoration: none;
+}
 
-  background: url('https://seodiz.ru/wp-content/uploads/2012/04/7bloggers-content-0.png');
+.homePageContainer,
+.componentsPage,
+.notFoundPage {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 
-  position: fixed;
-  z-index: -1;
-
-  width: 1600px;
-  min-width: 400px;
   width: 100%;
   height: 100vh;
+}
+
+.homePageContainer {
+  @extend %container;
+  justify-content: center;
+
+  background: url('https://seodiz.ru/wp-content/uploads/2012/04/7bloggers-content-0.png');
+
+  position: fixed;
+  z-index: -1;
 }
 
 .homePageText {
@@ -71,43 +87,22 @@ body {
   display: flex;
   flex-direction: column;
   background: url('https://seodiz.ru/wp-content/uploads/2012/04/7bloggers-content-0.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-
-  width: 1600px;
-  min-width: 400px;
-  width: 100%;
-  height: 100vh;
 }
 
 .componentsContainer {
   @extend %container;
   justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
-  width: 1600px;
-  min-width: 400px;
-  width: 100%;
-  height: 100px;
-  background-color: rgb(85, 82, 82);
+  height: 50px;
+  background-color: $backgroundHeaderColor;
 }
 
 .componentsText {
-  color: white;
   letter-spacing: 0.3em;
   font-size: 23px;
   text-align: center;
 }
 
 .notFoundPage {
-  background: url('https://www.elevated.com/wp-content/uploads/2016/08/404-error-page-not-found-robot-teacher-with-SL9TR32.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-
-  width: 1600px;
-  min-width: 400px;
-  width: 100%;
-  height: 100vh;
+  background: url('https://sitechecker.pro/wp-content/uploads/2017/12/404.png');
 }
